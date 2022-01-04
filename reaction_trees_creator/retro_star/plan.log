@@ -1,0 +1,43 @@
+01-13 22:46 root         INFO     Loading starting molecules from dataset/origin_dict.csv
+01-13 22:46 root         INFO     23081629 starting molecules loaded
+01-13 22:46 root         INFO     190 routes extracted from dataset/routes_possible_test_hard.pkl loaded
+01-13 22:46 root         INFO     Templates: one_step_model/template_rules_1.dat
+01-13 22:46 root         INFO     Loading trained mlp model from one_step_model/saved_rollout_state_1_2048.ckpt
+01-13 22:47 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:47 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:47 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:47 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:47 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:48 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:48 root         INFO     Expansion fails on C=NN=O!
+01-13 22:48 root         INFO     Final search status | success value | iter: 7.233666535653901 | inf | 500
+01-13 22:48 root         INFO     Succ: 0/1/190 | avg time: 93.62 s | avg iter: 500.00
+01-13 22:48 root         INFO     Synthesis route found!
+01-13 22:48 root         INFO     Final search status | success value | iter: 5.63652345477849 | 12.544278733760628 | 187
+01-13 22:48 root         INFO     Succ: 1/2/190 | avg time: 64.42 s | avg iter: 343.50
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Br!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Br!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Cl!
+01-13 22:49 root         INFO     Expansion fails on Cl[Sb](Cl)(Cl)(Cl)Cl!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Br!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Br!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Cl!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Cl!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Br!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Cl!
+01-13 22:49 root         INFO     Expansion fails on C[Mg]Br!
+01-13 22:49 root         INFO     Synthesis route found!
+01-13 22:49 root         INFO     Final search status | success value | iter: 5.540079416191525 | 12.447834695173663 | 85
+01-13 22:49 root         INFO     Succ: 2/3/190 | avg time: 49.63 s | avg iter: 257.33
+01-13 22:49 root         INFO     Synthesis route found!
+01-13 22:49 root         INFO     Final search status | success value | iter: 0.47280371555168477 | 0.47280395206458825 | 7
+01-13 22:49 root         INFO     Succ: 3/4/190 | avg time: 37.52 s | avg iter: 194.75
+01-13 22:51 root         INFO     Final search status | success value | iter: 6.699178911365038 | inf | 500
+01-13 22:51 root         INFO     Succ: 3/5/190 | avg time: 53.87 s | avg iter: 255.80
+01-13 22:51 root         INFO     Expansion fails on O=S(Cl)Cl!
+01-13 22:51 root         INFO     Synthesis route found!
+01-13 22:51 root         INFO     Final search status | success value | iter: 5.06995451027989 | 7.327709129608561 | 100
+01-13 22:51 root         INFO     Succ: 4/6/190 | avg time: 48.44 s | avg iter: 229.83
+01-13 22:53 root         INFO     Synthesis route found!
+01-13 22:53 root         INFO     Final search status | success value | iter: 6.479655135414302 | 6.484672995438446 | 399
+01-13 22:53 root         INFO     Succ: 5/7/190 | avg time: 59.18 s | avg iter: 254.00
