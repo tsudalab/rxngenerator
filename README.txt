@@ -7,7 +7,7 @@
 1) Creating dataset of reaction trees
 
 We extracted molecules from USPTO reaction data set and used Retro* to synthesize them to obtain a set of (multi-step) chemical reactions. 
-Go to the folder "reaction_trees_creator" and type: python run_to_create_reaction_trees.py to generate reaction trees. 
+Go to the folder "reaction_trees_creator/retro_star/" and type: python run_to_create_reaction_trees.py to generate reaction trees. 
 The information about reactants and templates can be referred in the following files: rxngenerator/reaction_trees_creator/retro_star/dataset/origin_dict.csv 
 and rxngenerator/reaction_trees_creator/retro_star/one_step_model/template_rules_1.dat, respectively. 
 The extracted reaction trees are stored in /data/synthetic_routes_uspto.txt. 
