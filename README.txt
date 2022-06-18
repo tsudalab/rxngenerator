@@ -6,12 +6,20 @@
 
 1) Creating dataset of reaction trees
 
-We extracted molecules from USPTO reaction data set and used Retro* to synthesize them to obtain a set of (multi-step) chemical reactions. 
-Go to the folder "reaction_trees_creator/retro_star/" and type: python run_to_create_reaction_trees.py to generate reaction trees. 
+We extracted molecules from USPTO reaction data set and used Retro* to synthesize them to obtain a set of (multi-step) chemical reactions.
+Before dataset creation, need to set up the environment as follows (also see See https://github.com/binghong-ml/retro_star for more details of the implementation and settings of retro*):
+
+    +) In reaction_trees_creator, type:  "conda env create -f environment.yml; conda activate retro_star_env” for creating a conda environment
+    +) Download and unzip the files from this link: https://www.dropbox.com/s/ar9cupb18hv96gj/retro_data.zip?dl=0, and put all the folders (dataset/, one_step_model/ and saved_models/) under the retro_star directory.
+    +) Install Retro* lib: "pip install -e retro_star/packages/mlp_retrosyn; pip install -e retro_star/packages/rdchiral; pip install -e .”
+    +) Install MongoDB on MacOS: please follow this link: https://www.geeksforgeeks.org/how-to-install-mongodb-on-macos/
+
+
+Then, go to the folder "reaction_trees_creator/retro_star/" and type: python run_to_create_reaction_trees.py to generate reaction trees. 
 The information about reactants and templates can be referred in the following files: rxngenerator/reaction_trees_creator/retro_star/dataset/origin_dict.csv 
 and rxngenerator/reaction_trees_creator/retro_star/one_step_model/template_rules_1.dat, respectively. 
 The extracted reaction trees are stored in /data/synthetic_routes.txt. 
-See https://github.com/binghong-ml/retro_star for more details of the implementation and settings of retro*. 
+
 
 2) Filtering the dataset of reaction trees
 To make sure that starting molecules and reaction templates are popular for the chemists, we filtered out the original set of reactions so that each reaction 
