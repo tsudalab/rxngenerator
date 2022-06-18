@@ -16,7 +16,7 @@ See https://github.com/binghong-ml/retro_star for more details of the implementa
 2) Filtering the dataset of reaction trees
 To make sure that starting molecules and reaction templates are popular for the chemists, we filtered out the original set of reactions so that each reaction 
 contains starting molecules and templates that occur at least five times in the filtered set. 
-Go to the folder /data and type: python filter_dataset.py
+Copy synthetic_routes.txt (from step 1) to the folder /data, go to /data and type: python filter_dataset.py
 
 3) Training
 To train the model, type the following command:
