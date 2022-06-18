@@ -7,7 +7,7 @@
 1) Creating dataset of reaction trees
 
 We extracted molecules from USPTO reaction data set and used Retro* to synthesize them to obtain a set of (multi-step) chemical reactions.
-Before dataset creation, need to set up the environment as follows (also see See https://github.com/binghong-ml/retro_star for more details of the implementation and settings of retro*):
+Before dataset creation, need to set up the environment as follows (also see https://github.com/binghong-ml/retro_star for more details of the implementation and settings of retro*):
 
     +) In reaction_trees_creator, type:  "conda env create -f environment.yml; conda activate retro_star_env” for creating a conda environment
     +) Download and unzip the files from this link: https://www.dropbox.com/s/ar9cupb18hv96gj/retro_data.zip?dl=0, and put all the folders (dataset/, one_step_model/ and saved_models/) under the retro_star directory.
