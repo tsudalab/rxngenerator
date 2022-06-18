@@ -230,7 +230,7 @@ def filter_dataset(input_files, output_file, metric="qed", reactant_count = 5, t
 	print("Number of original chemical reactions:", len(rxn_trees))
 	print("Number of valid chemical reactions:", count)
 
-filter_dataset(["synthetic_routes_uspto.txt"], "data.txt", metric ="qed")
+filter_dataset(["synthetic_routes.txt"], "data.txt", metric ="qed")
 
 
 
