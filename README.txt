@@ -8,10 +8,10 @@
 
 We extracted molecules from USPTO reaction data set and used Retro* to synthesize them to obtain a set of (multi-step) chemical reactions.
 Before dataset creation, need to set up the environment as follows (also see https://github.com/binghong-ml/retro_star for more details of the implementation and settings of retro*):
-
+    +) Download and decompress the following USPTO dataset: https://figshare.com/articles/MongoDB_dump_compressed_/4833482. Its name after decompression is "dump". Run the MongoDB Server (by mongod), open a new terminal and type: mongorestore <path to dump folder> to import "dump" into the list of mongo databases.
     +) In reaction_trees_creator, type:  "conda env create -f environment.yml; conda activate retro_star_env” for creating a conda environment
     +) Download and unzip the files from this link: https://www.dropbox.com/s/ar9cupb18hv96gj/retro_data.zip?dl=0, and put all the folders (dataset/, one_step_model/ and saved_models/) under the retro_star directory.
-    +) Install Retro* lib: "pip install -e retro_star/packages/mlp_retrosyn; pip install -e retro_star/packages/rdchiral; pip install -e .”
+    +) Install Retro* lib: "pip install -e retro_star/packages/mlp_retrosyn; pip install -e retro_star/packages/rdchiral; pip install -e ."
     +) Install MongoDB on MacOS: please follow this link: https://www.geeksforgeeks.org/how-to-install-mongodb-on-macos/
 
 
@@ -34,7 +34,7 @@ The weights of the trained model are saved in the folder "weights", which will b
 
 4) Sampling
 To sample new molecules with trained model, please run:
-python sample.py -w 200 -l 50 -d 2 -v "weights/data.txt_fragmentvocab.txt" -t "data/data.txt" -s "weights/uspto_vae_iter-100.npy" -o “Results/generated_rxns.txt"
+python sample.py -w 200 -l 50 -d 2 -v "weights/data.txt_fragmentvocab.txt" -t "data/data.txt" -s "weights/uspto_vae_iter-100.npy" -o "Results/generated_rxns.txt"
 
 The generated molecules and associated reaction trees are saved in file: "Results/generated_rxns.txt"
 
@@ -42,7 +42,7 @@ The generated molecules and associated reaction trees are saved in file: "Result
 The Bayesian optimization experiments use sparse Gaussian processes coded in theano. To install Theano, go to the folder Theano-master and type: python setup.py install
 
 Then, go to the folder bo and type the following command to run Bayesian optimization:
-python run_bo.py -w 200 -l 50 -d 2 -r 1 -v “../weights/data.txt_fragmentvocab.txt" -t "../data/data.txt" -s "../weights/uspto_vae_iter-100.npy" -m “qed”
+python run_bo.py -w 200 -l 50 -d 2 -r 1 -v "../weights/data.txt_fragmentvocab.txt" -t "../data/data.txt" -s "../weights/uspto_vae_iter-100.npy" -m "qed"
 
 Please change the parameter -r with different random seed numbers. We performed 10 times of running BO, which results in 10 files of valid reaction trees saved in the folder Results. 
 To see reaction trees with top optimized QED scores, simply type: python print_results.py
